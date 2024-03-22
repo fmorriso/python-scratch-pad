@@ -1,5 +1,10 @@
 import sys
 
+
+def get_python_version() -> str:
+    return f'{sys.version_info.major}.{sys.version_info.minor}.{sys.version_info.micro}'
+
+
 def make_2d_grid() -> list[list[int]]:
     grid: list[list[int]] = []
     square_size: int = 8
@@ -11,6 +16,8 @@ def make_2d_grid() -> list[list[int]]:
 
 
 if __name__ == '__main__':
+    print(f'Python version {get_python_version()}')
+
     list2d = make_2d_grid()
     print(f'{list2d=}')
 
